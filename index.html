@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+
+  <title>Pagina de vendas - pizzaria</title>
+</head>
+
+<body>
+  <div class="loader-wrapper">
+    <div class="loader">
+      <div class="fusca">
+
+      </div>
+      <div class="asfalto"></div>
+      <div class="palmeiras">
+
+      </div>
+    </div>
+  </div>
+  <header>
+    <section>
+
+      <input id="toggleChecker" type="checkbox">
+      <label id="togglerLable" for="toggleChecker" onclick="mobileToggleMenu()">
+        <div class="checkboxtoggler">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+      </label>
+
+      <div class="header-logo">
+        <img src="./assets/img/logo.png" onclick="reloadPage()" alt="Logo Pizzaria">
+      </div>
+
+      <h1 class="header-title" onclick="reloadPage()"> Pizzaria Tropicalizza</h1>
+
+      <div class="cart-icon">
+        <img src="./assets/img/cart.png" id="cart-icon" onclick="toggleMenu()">
+      </div>
+
+    </section>
+
+  </header>
+
+  <main>
+
+
+    <aside id="header-carrinho-menu" class="header-carrinho-menu">
+      <ul id="carrinho-pedido">
+      </ul>
+      <h2 id="titulo-carrinho">Total:</h2>
+      <button id="finalize-order" onclick="reloadPage()">Finalizar Pedido</button>
+    </aside>
+
+    <nav class="fixed-menu fixed-menu-mobile" id="fixed-menu">
+      <ul>
+        <li id="fixed-menu-first"><a href="#inicio">Início</a></li>
+        <li><a href="#qualidade">Nossas Pizzas</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#historia">Sobre Nós</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li id="fixed-menu-last"><a href="#reservas">Reservas</a></li>
+      </ul>
+    </nav>
+    <section class="background">
+      <section id="inicio" class="banner">
+        <div class="banner-container">
+          <div id="grid-banner">
+            <h1 class="banner-title">Bem Brasileira, do jeitinho que a gente gosta!</h1>
+            <a href="#cardapio">
+              <button class="cta">
+                <span class="span">Conheça nossas Pizzas</span>
+                <span class="second">
+                  <svg width="50px" height="20px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <path class="one"
+                        d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                        fill="#FFFFFF"></path>
+                      <path class="two"
+                        d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                        fill="#FFFFFF"></path>
+                      <path class="three"
+                        d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                        fill="#FFFFFF"></path>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="container">
+
+
+        <!-- SOBRE PIZZA/QUALIDADE -->
+
+        <section id="qualidade">
+
+          <h1 class="title-h1">100% Artesanais</h1>
+          <div class="about-grid">
+            <div class="about-options">
+              <button data-target="massa" autofocus >Massa perfeita<span class="about-pizza-arrow"></span></button>
+              <button data-target="molho">Molho fresco e saboroso<span class="about-pizza-arrow"></span></button>
+              <button data-target="ingredientes">Ingredientes Frescos e Locais<span
+                  class="about-pizza-arrow"></span></button>
+              <button data-target="queijos">Queijos selecionados<span class="about-pizza-arrow"></span></button>
+              <button data-target="sabores">Sabores Únicos<span class="about-pizza-arrow"></span></button>
+            </div>
+            <div class="card-about-pizza">
+              <div id="descricao-massa" class="active">
+                <img class="about-gifs" src="./assets/img/about/massa.gif">
+                Nossa massa é cuidadosamente preparada por nossos chefs especializados,
+                utilizando uma receita secreta
+                de fermentação lenta. Isso garante uma textura crocante por fora e irresistivelmente macia por dentro,
+                proporcionando a base perfeita para cada mordida.
+              </div>
+              <div id="descricao-molho">
+                <img class="about-gifs" src="./assets/img/about/sauce.webp">
+                Nosso molho de tomate é feito a partir de tomates frescos e maduros, combinados
+                com uma seleção única
+                de ervas e temperos. O resultado é uma explosão de sabor que realça cada camada da pizza, proporcionando
+                uma experiência gastronômica inigualável.
+              </div>
+              <div id="descricao-queijos">
+                <img class="about-gifs" src="./assets/img/about/cheese.webp">
+                Utilizamos uma mistura harmoniosa de queijos premium, cuidadosamente
+                escolhidos para criar uma
+                combinação única de sabores e texturas. A fusão derretida de muçarela de alta qualidade e outros queijos
+                especiais cria um equilíbrio perfeito que derreterá na sua boca.
+              </div>
+              <div id="descricao-ingredientes">
+                <img class="about-gifs" src="./assets/img/about/igredients.webp"> 
+                Nossos toppings são frescos, sazonais e provenientes de fornecedores
+                locais sempre que possível.
+                Verduras crocantes, cogumelos frescos, carnes suculentas - cada ingrediente é escolhido a dedo para
+                garantir a
+                máxima qualidade e frescor em cada pedaço.
+              </div>
+              <div id="descricao-sabores">
+                <img class="about-gifs" src="./assets/img/about/sabores.gif">
+                Explore a diversidade dos nossos sabores exclusivos, desde combinações
+                clássicas até criações inovadoras que desafiam as expectativas. Cada pizza é uma expressão de
+                criatividade culinária, combinando técnicas tradicionais com toques contemporâneos para oferecer algo
+                verdadeiramente especial.
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- INÍCIO DO CARDÁPIO -->
+        <section id="cardapio" class="min-height">
+          <h1 class="title-h1" id="cardapio">Cardápio</h1>
+
+
+          <div class="principal-menu">
+            <button class="prev"><i id="prev"></i></button>
+            <ul class="carrossel">
+
+              <li class="card">
+                <img class="cardImage" src="./assets/img/pizzas/mini-pizza-1.jpg" alt="Pizza de pudim"
+                  draggable="false">
+
+                <div class="card__content">
+
+                  <h2 class="card__title">Pudim</h2>
+                  <span class="card__description">Uma fusão única entre a tradição italiana e a doçura envolvente do
+                    pudim. Com uma base de massa perfeitamente assada, esta pizza apresenta camadas de pudim cremoso,
+                    culminando em uma experiência
+                    irresistível.</span>
+                  <button class="card-button">Adicionar ao carrinho</button>
+                </div>
+              </li>
+              <li class="card">
+                <img class="cardImage" src="./assets/img/pizzas/mini-pizza-2.jpg" alt="Pizza de rapadura com carne seca"
+                  draggable="false">
+                <div class="card__content">
+
+                  <h2 class="card__title">Rapadura com carne seca</h2>
+                  <span class="card__description">Nesta criação única, a tradição se encontra com a ousadia,
+                    apresentando
+                    uma base de massa
+                    perfeitamente assada, coberta com generosos pedaços de rapadura caramelizada e a irresistível
+                    textura
+                    da
+                    carne seca.</span>
+                  <button class="card-button">Adicionar ao carrinho</button>
+                </div>
+              </li>
+              <li class="card">
+                <img class="cardImage" src="./assets/img/pizzas/mini-pizza-3.jpg" alt="Pizza de frango catupiry"
+                  draggable="false">
+                <div class="card__content">
+
+                  <h2 class="card__title">Frango catupiry</h2>
+                  <span class="card__description">Uma explosão de sabores que todos conhecem! Sobre uma base de massa
+                    perfeitamente assada, cada fatia
+                    oferece a harmonia perfeita entre a textura macia do frango desfiado e o toque cremoso e saboroso do
+                    Catupiry.</span>
+                  <button class="card-button">Adicionar ao carrinho</button>
+                </div>
+              </li>
+              <li class="card">
+                <img class="cardImage" src="./assets/img/pizzas/mini-pizza-4.jpg" alt="Pizza de pequi"
+                  draggable="false">
+                <div class="card__content">
+
+                  <h2 class="card__title">Pequi</h2>
+                  <span class="card__description">Desbrave o território desconhecido da culinária! Massa crocante,
+                    cobertura exótica de pequi - cada
+                    fatia é uma aventura para os corajosos. Para aqueles que acham que sabem tudo sobre pizza, o pequi
+                    risca
+                    as regras e redefine o que é surpreendente.</span>
+                  <button class="card-button">Adicionar ao carrinho</button>
+                </div>
+              </li>
+
+              <li class="card">
+                <img class="cardImage" src="./assets/img/pizzas/mini-pizza-5.jpg" alt="Pizza de queijo com milho"
+                  draggable="false">
+                <div class="card__content">
+
+                  <h2 class="card__title">Queijo com milho</h2>
+                  <span class="card__description">A massa crocante dá espaço para a combinação clássica de queijo
+                    derretido e milho dourado. É
+                    popular, é irresistível, é a escolha certa para quem sabe que o sucesso de uma pizza está na
+                    simplicidade dos sabores favoritos.</span>
+                  <button class="card-button">Adicionar ao carrinho</button>
+                </div>
+              </li>
+              <li class="card">
+                <img class="cardImage" src="./assets/img/pizzas/mini-pizza-6.jpg" alt="Pizza de buriti"
+                  draggable="false">
+
+                <div class="card__content">
+
+                  <h2 class="card__title">Buriti</h2>
+                  <span class="card__description">Prepare-se para um encontro inusitado com nossa Pizza de Buriti. Sim,
+                    você leu certo, Buriti.
+                    Porque, afinal, quem precisa de sabores comuns quando se pode ter a extravagância tropical do
+                    buriti?</span>
+                  <button class="card-button">Adicionar ao carrinho</button>
+                </div>
+              </li>
+              <li class="card">
+                <img class="cardImage" src="./assets/img/pizzas/mini-pizza-7.jpg" alt="Pizza de morango com chocolate"
+                  draggable="false">
+                <div class="card__content">
+
+                  <h2 class="card__title">Morango com chocolate</h2>
+                  <span class="card__description">Cada fatia é uma dança entre o frescor irresistível do morango e a
+                    decadência do chocolate
+                    derretido. Essa pizza é o convite perfeito para um jantar romântico e elegante, onde o amor está no
+                    ar
+                    e
+                    o chocolate está na massa.</span>
+                  <button class="card-button">Adicionar ao carrinho</button>
+                </div>
+              </li>
+              <li class="card">
+                <img class="cardImage" src="./assets/img/pizzas/mini-pizza-8.jpg" alt="Pizza de chocolate com sorvete"
+                  draggable="false">
+                <div class="card__content">
+
+                  <h2 class="card__title">Chocolate com sorvete</h2>
+                  <span class="card__description">Em um país tropical, até a pizza quer se refrescar! A massa crocante é
+                    o
+                    palco perfeito para o show
+                    de sabor, onde o chocolate derretido e o sorvete se encontram em um abraço gelado e
+                    delicioso.</span>
+                  <button class="card-button">Adicionar ao carrinho</button>
+                </div>
+              </li>
+
+              <li class="card">
+                <img class="cardImage" src="./assets/img/pizzas/mini-pizza-9.jpg" alt="Pizza de cinco queijos"
+                  draggable="false">
+                <div class="card__content">
+                  <h2 class="card__title">Cinco queijos</h2>
+                  <span class="card__description">Porque a vida é curta demais para escolher apenas um! Esta pizza é o
+                    desfile do queijo, com cheddar,
+                    mussarela, gorgonzola, parmesão e provolone marchando em uma deliciosa parada de sabores.</span>
+                  <button class="card-button">Adicionar ao carrinho</button>
+                </div>
+              </li>
+
+            </ul>
+
+            <!--  Os cards tão lá no index.js -->
+
+            <button class="next"><i id="next"></i></button>
+
+          </div>
+
+
+
+        </section>
+
+
+
+        <!-- HISTÓRIA -->
+        <div id="historia">
+          <h1 class="title-h1"> Nossa História </h1>
+
+          <div class="timeline">
+
+            <div class="timeline-container hidden right-container">
+              <img src="./assets/img/circle.png" alt="timeline-icone">
+              <div class="text-box right-text-box">
+                <img src="./assets/img/inauguração.jpg" alt="inauguração">
+                <h2>Ano de abertura - 2018 </h2>
+                <p>Abertura da Pizzaria Tropicalizza com entusiasmo e dedicação à autenticidade.</p>
+                <p>Primeiras receitas incorporando sabores regionais brasileiros.</p>
+                <p>Estabelecimento de um ambiente acolhedor, onde clientes podem sentir o calor da hospitalidade
+                  brasileira.</p>
+                <span class="right-container-arrow"></span>
+              </div>
+            </div>
+
+            <div class="timeline-container hidden left-container">
+              <img src="./assets/img/circle.png" alt="timeline-icone">
+              <div class="text-box left-text-box">
+                <img src="./assets/img/reconhecimento-regional.jpg" alt="Reconhecimento Regional">
+                <h2>Reconhecimento Regional - 2019</h2>
+                <p>Conquista de prêmios locais e reconhecimento da imprensa por excelência gastronômica.</p>
+                <p>Participação em festivais culinários regionais, apresentando especialidades da Pizzaria Tropicalizza.
+                </p>
+                <span class="left-container-arrow"></span>
+              </div>
+            </div>
+
+            <div class="timeline-container hidden right-container">
+              <img src="./assets/img/circle.png" alt="timeline-icone">
+              <div class="text-box right-text-box">
+                <img src="./assets/img/pizzaiolo.jpg" alt="Chef Experimentando Ingredientes">
+                <h2>Aperfeiçoando a Arte - 2020</h2>
+                <p>Com a paixão pela qualidade, expandimos o cardápio, introduzindo novas combinações e aprimorando
+                  nossas técnicas artesanais.</p>
+                <p>Estabelecemos parcerias com produtores locais para garantir ingredientes frescos e sustentáveis.</p>
+                <span class="right-container-arrow"></span>
+              </div>
+            </div>
+
+            <div class="timeline-container hidden left-container">
+              <img src="./assets/img/circle.png" alt="timeline-icone">
+              <div class="text-box left-text-box">
+                <img src="./assets/img/ROBERTO.jpg" alt="teste">
+                <h2>Envolvimento Comunitário - 2021</h2>
+                <p>Fortalecemos nosso compromisso com a comunidade, organizando eventos beneficentes e apoiando
+                  instituições locais.</p>
+                <p>Aprimoramos o programa de fidelidade, oferecendo vantagens exclusivas aos clientes leais.</p>
+                <span class="left-container-arrow"></span>
+              </div>
+            </div>
+
+            <div class="timeline-container hidden right-container">
+              <img src="./assets/img/circle.png" alt="timeline-icone">
+              <div class="text-box right-text-box">
+                <img src="./assets/img/marcelo.jpg" alt="teste">
+                <h2>Nova Unidade - 2022</h2>
+                <p>No quinto ano celebramos a abertura de uma nova filial para atender à
+                  crescente demanda e compartilhar nossos sabores únicos com uma audiência ainda mais ampla.</p>
+                <p>Ao expandir para um novo local, mantivemos o foco na qualidade excepcional, proporcionando aos
+                  clientes uma experiência autêntica e deliciosa.</p>
+                <span class="right-container-arrow"></span>
+              </div>
+            </div>
+
+            <div class="timeline-container hidden left-container">
+              <img src="./assets/img/circle.png" alt="timeline-icone">
+              <div class="text-box left-text-box">
+                <img src="./assets/img/delivery.png" alt="teste">
+                <h2>Inovação no Delivery - 2023</h2>
+                <p>Introdução de embalagens sustentáveis e tecnologia de rastreamento em tempo real para os pedidos de
+                  entrega.</p>
+                <p>Lançamento de um aplicativo exclusivo da Pizzaria Tropicalizza, oferecendo descontos especiais e um
+                  programa de recompensas.</p>
+                <span class="left-container-arrow"></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- FEEDBACK CLIENTES -->
+        <section id="avaliacoes">
+
+          <h1 class="title-h1">Avaliações</h1>
+          <div class="assessments">
+
+            <div class="assessments-card">
+              <img src="./assets/img/google.jpg" alt="google-img">
+            </div>
+
+            <div class="assessments-card">
+              <img src="./assets/img/ifood.jpg" alt="ifood-img">
+            </div>
+
+            <div class="assessments-card">
+              <img src="./assets/img/tripadivisor.jpg" alt="Tripadvisor-img">
+            </div>
+
+            <div class="assessments-card">
+              <img src="./assets/img/facebook.jpg" alt="facebook-img">
+            </div>
+        </section>
+
+        <!-- RESERVAS -->
+        <section id="reservas">
+          <h1 class="title-h1"> Faça suas reservas por aqui!</h1>
+          <p>Caso tenha interesse em fazer uma reserva em nosso restaurante
+            nos envie contato por aqui que estaremos respondendo pelo email.
+          </p>
+
+          <div class="contact">
+            <form>
+              <label for="name">Nome e Sobrenome</label>
+              <input type="text" name="nome" id="name" placeholder="Digite seu nome e sobrenome" required>
+
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Digite o email aqui" required>
+
+              <label for="numero">Telefone</label>
+              <input type="number" name="phone" id="numero" placeholder="Digite seu telefone" required>
+
+              <label for="hora">Data e Hora da Reserva</label>
+              <input type="datetime-local" name="datetime" id="horario" required>
+
+              <label for="pessoas">Quantidade de Pessoas</label>
+              <input type="text" name="people" id="pessoas" maxlength="2" required>
+
+              <label for="observations">Observações sobre a reserva</label>
+              <input type="text" name="observation" id="observations" placeholder="informações extras ou observações">
+
+              <button type="submit">Efetuar Reserva</button>
+            </form>
+
+            <div class="more-information">
+              <div class="Restaurant">
+                <h1>No restaurante</h1>
+                <p>Reserve a sua mesa online com pelo menos 24 horas de antecedência preenchendo o formulário abaixo.
+                  Caso
+                  contrário, ligue-nos pelo telefone 965984545</p>
+              </div>
+
+              <div class="delivery">
+                <h1>Peça sua pizza</h1>
+                <p>diretamente no restaurante ou pelo telefone 965984545</p>
+              </div>
+
+              <div class="dates">
+                <h1>Horários</h1>
+                <p>Terça e quarta-feira, das 11h30 às 14h00.
+                  De quinta a sábado, das 11h30 às 14h00 e das 18h00 às 21h30.</p>
+              </div>
+
+              <div class="adress">
+                <h1>Endereço</h1>
+                <p>R. Euclides Pacheco, 761 - Tatuapé, São Paulo - SP, 03321-000</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="footer">
+          <div class="social-media">
+            <a href="https://www.instagram.com/">
+              <img src="./assets/img/logo-insta.jpg" alt="Instagram">
+            </a>
+
+            <a href="https://web.facebook.com/?locale=pt_BR&_rdc=1&_rdr">
+              <img src="./assets/img/logo-facebook.jpg" alt="Facebook">
+            </a>
+
+            <a href="https://www.tripadvisor.com/">
+              <img src="./assets/img/logo-tripadvisor.jpg" alt="Tripadvisor">
+            </a>
+
+            <a href="https://www.ifood.com.br/">
+              <img src="./assets/img/logo-ifood.jpg" alt="Ifood">
+            </a>
+          </div>
+
+          <p>Site criado por: nomes aqui </p>
+          <p class="copy">&copy; Todos os direitos reservados | Nome pizzaria</p>
+        </section>
+      </section>
+    </section>
+
+    </section>
+  </main>
+
+
+  <div class="modal-pedido" id="pizza-pedido">
+
+    <div class="modal-content">
+
+      <h1 id="modal-title">Escolha o tamanho da pizza</h1>
+      <div id="modal-box">
+        <label>
+          <input type="radio" name="radioGroup" value="Pequena" checked />
+          <div class="radio-pequena box">
+            <span>Pequena</span>
+          </div>
+        </label>
+
+        <label>
+          <input type="radio" name="radioGroup" value="Grande" />
+          <div class="radio-grande box">
+            <span>Grande</span>
+          </div>
+        </label>
+      </div>
+
+      <button id="btn-confirmar">Confirmar</button>
+    </div>
+  </div>
+  
+  <div id="popups-container"></div>
+
+</body>
+<script src="./assets/js/header.js"></script>
+<script src="./assets/js/index.js"></script>
+
+</html>
