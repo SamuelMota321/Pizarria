@@ -8,4 +8,4 @@ Auf Wiedersehen!
 
 Participantes:
 
-@ - (https://github.com/)
+@LucasAvezedo - (https://github.com/LucasAvezedo)
