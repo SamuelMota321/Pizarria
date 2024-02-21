@@ -4,8 +4,6 @@ Apesar das dificuldades (que foram consideráveis), conseguimos concluir o proje
 
 Para uma melhor visualização, recomendamos o uso da extensão Live Server do Visual Studio Code, que permite que a imagem do banner corresponda a um dos estados brasileiros e todas as imagens sejam carregadas corretamente. 
 
-Auf Wiedersehen!
-
 Participantes:
 
 @LucasAvezedo - (https://github.com/LucasAvezedo)
